@@ -1,0 +1,50 @@
+1:reversal of a array
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int arr[]={1,2,3,4,5};
+        int n=arr.length;
+        int sp=0;
+        int ep=n-1;
+        while(sp<ep){
+            int temp=arr[sp];
+            arr[sp]=arr[ep];
+            arr[ep]=temp;
+            sp++;
+            ep--;
+        }
+        for(int i=0;i<n;i++){
+            System.out.println(arr[i]);
+        }
+        
+    }
+}
+2:reversing some part of an array
+class HelloWorld {
+    public void reverse(int[] arr, int s,int e){
+        int sp=s;
+        int ep=e;
+        while(sp<ep){
+            int temp=arr[sp];
+            arr[sp]=arr[ep];
+            arr[ep]=temp;
+            sp++;
+            ep--;
+        }
+        for(int i=0;i<arr.length;i++){
+            System.out.println(arr[i]);
+        }
+    }
+        
+public static void main(String[] args) {
+        HelloWorld hr= new HelloWorld();
+        int arr[]={1,2,3,4,5};
+        int t=1;
+        int u=4;
+        hr.reverse(arr,t,u);
+}
+  }
+
+
