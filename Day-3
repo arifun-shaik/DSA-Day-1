@@ -1,0 +1,40 @@
+4: Given n array find the total no. of elements having atleast 1 element greater than itself
+import java.util.*;
+class ValidNumber {
+    public int countgreater(int arr[]){
+        int max=Integer.MIN_VALUE;
+        int n=arr.length;
+        // find the maximum number in an array
+        for(int i=0;i<n;i++){
+            if(max<arr[i]){
+                max=arr[i];
+            }
+        }
+        // Find the occurence of maximum number in the array
+        int count=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]==max){
+                count++;
+            }
+        }
+        // Substrate the maximum number count from the array
+        return arr.length-count;
+
+    }
+
+    public static void main(String[] args) {
+        ValidNumber vn= new ValidNumber();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter number of elements of array");
+        int n=sc.nextInt();
+        System.out.println("enter the elements of array");
+        int arr[]= new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int result=vn.countgreater(arr);
+        // Display the valid numbers having number value greater than itself
+        System.out.println("the valid numbers are:"+result);
+        
+    }
+}
