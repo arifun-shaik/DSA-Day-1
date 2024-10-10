@@ -1,0 +1,87 @@
+1: How to take a character array as input
+import java.util.*;
+class HelloWorld {
+    public void printchars(char[] ch){
+        int n=ch.length;
+        for(int i=0;i<n;i++){
+            System.out.print(ch[i]);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        sc.nextLine();
+        char[] ch=new char[n];
+        String str=sc.nextLine();
+        for(int i=0;i<n;i++){
+            ch[i]=str.charAt(i);
+        }
+        HelloWorld hr=new HelloWorld();
+        hr.printchars(ch);
+    }
+    
+}
+
+2: How to convert uppercase letter into lower and vice versa
+import java.util.*;
+class HelloWorld {
+    public void printchars(char[] ch){
+        int n=ch.length;
+        for(int i=0;i<n;i++){
+            if(ch[i]>=65&&ch[i]<=90){
+                ch[i]=(char)(ch[i]+32);
+            }
+            else{
+                ch[i]=(char)(ch[i]-32);
+        }
+        System.out.print(ch[i]);
+    }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        sc.nextLine();
+        char[] ch=new char[n];
+        String str=sc.nextLine();
+        for(int i=0;i<n;i++){
+            ch[i]=str.charAt(i);
+        }
+        HelloWorld hr=new HelloWorld();
+        hr.printchars(ch);
+    }
+    
+}
+3: How to find reversal of a string
+import java.util.*;
+class HelloWorld {
+    public void printchars(char[] ch){
+        int n=ch.length;
+        int sp=0;
+        int ep=n-1;
+        while(sp<=ep){
+            char temp=ch[sp];
+            ch[sp]=ch[ep];
+            ch[ep]=temp;
+            sp++;
+            ep--;
+        }
+        String str1="";
+        String st1=str1.valueOf(ch);
+        System.out.print(st1);
+    
+        
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        sc.nextLine();
+        char[] ch=new char[n];
+        String str=sc.nextLine();
+        for(int i=0;i<n;i++){
+            ch[i]=str.charAt(i);
+        }
+        HelloWorld hr=new HelloWorld();
+        hr.printchars(ch);
+    }
+    
+}
